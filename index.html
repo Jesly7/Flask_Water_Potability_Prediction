@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <center>
+        <head>
+            <title>Water Quality Prediction</title>
+            <h1>Water Quality Prediction</h1>
+        </head>
+        <h1>One on One Prediction</h1>
+
+    <body>
+        <form action="/predict" method="POST">
+    
+            <label for="ph">PH</label>
+            <input type="number" id="ph" name="ph"><br><br>
+
+            <label for="Hardness">HARDNESS</label>
+            <input type="number" id="Hardness" name="Hardness"><br><br>
+
+            <label for="Solids">SOLIDS</label>
+            <input type="number" id="Solids" name="Solids"><br><br>
+
+            <label for="Chloramines">CHLORAMINES</label>
+            <input type="number" id="Chloramines" name="Chloramines"><br><br>
+            
+            <label for="Sulfate">SULFATE</label>
+            <input type="number" id="Sulfate" name="Sulfate"><br><br>
+
+            <label for="Conductivity">CONDUCTIVITY</label>
+            <input type="number" id="Conductivity" name="Conductivity"><br><br>
+
+            <label for="Organic_carbon">ORGANIC_CARBON</label>
+            <input type="number" id="Organic_carbon" name="Organic_carbon"><br><br>
+
+            <label for="Trihalomethanes">TRIHALOMETHANES</label>
+            <input type="number" id="Trihalomethanes" name="Trihalomethanes"><br><br>
+
+            <label for="Turbidity">TURBIDITY</label>
+            <input type="number" id="Turbidity" name="Turbidity"><br><br>
+
+            <input type="submit">
+        </form>
+    </body>
+    <br>
+    <br>
+    <h1>Bulk Prediction</h1>
+    <br>
+    <br>
+    <body>
+        <form action="/uploader" method="POST" enctype="multipart/form-data">
+            <input type="file" name="file" accept="csv" />
+            <button>Download</button>
+            <br><br>
+            {{data}}
+        </form>
+
+    </body>
+    </center>
+</html>
